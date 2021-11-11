@@ -1,0 +1,9 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://tekminfratest.cvt5or8wsltk.ap-south-1.rds.amazonaws.com:3306/billa
+    username: admin
+    password: QJAnHjsYHenjz3E47xbj

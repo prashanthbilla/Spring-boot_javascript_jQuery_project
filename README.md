@@ -91,7 +91,7 @@ Getting user details:
 ### Note: There is No Functionality to Delete the User in User Login:
 ![UserLoginSuccessDetails](https://user-images.githubusercontent.com/85600714/141422510-2f5c4b88-eab9-4720-9356-ef1822e01116.png)
 
-## Update and Logout Functions are Same as the AdminLogin Functionality:
+### Update and Logout Functions are Same as the AdminLogin Functionality:
 
 
 ### Thank You  

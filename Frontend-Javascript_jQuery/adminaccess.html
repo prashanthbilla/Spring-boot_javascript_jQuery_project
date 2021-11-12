@@ -60,7 +60,12 @@
         }
     </style>
     <script type="text/javascript">
-        var name=localStorage.getItem("firstname")
+
+
+        function logout() {
+            location.href = "http://127.0.0.1:5500/login.html";
+        }
+        var name = localStorage.getItem("firstname")
         console.log(name)
         $(document).ready(function () {
             $.getJSON('http://localhost:8081/api/v1/get', function (json) {
@@ -151,7 +156,7 @@
                     document.getElementById("password").value = password.html();
                     document.getElementById("phoneNum").value = phoneNum.html();
                 } else {
-                    document.getElementById("id1").value='';
+                    document.getElementById("id1").value = '';
                     document.getElementById("name").value = '';
                     document.getElementById("userId").value = '';
                     document.getElementById("password").value = '';
@@ -185,11 +190,11 @@
                 success: function (result) {
 
                     window.alert(result.message)
-                    window.reload(true);
+                    location.reload(true);
                 },
                 error: function (err) {
                     window.alert(result.message)
-                    window.reload(true);
+                    location.reload(true);
                 }
             });
         });
@@ -200,6 +205,9 @@
 
     <center>
         <h2>USER MANAGEMENT APP</h2>
+        <p>
+            <button type="button" onclick="logout()">LOGOUT</button>
+        </p>
     </center>
 
     <center>

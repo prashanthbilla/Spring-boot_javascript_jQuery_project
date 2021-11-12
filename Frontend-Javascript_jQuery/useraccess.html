@@ -59,24 +59,33 @@
             background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #1e3d47), color-stop(1, #2e5764));
         }
     </style>
+
     <script type="text/javascript">
 
+
+        function logout() {
+            location.href="http://127.0.0.1:5500/login.html";
+        }
+
+        let objectData;
+
         var name = localStorage.getItem("id")
-        console.log(name)
+
         $(document).ready(function () {
             $.getJSON(`http://localhost:8081/api/v1/get/${name}`, function (json) {
-                console.log(json)
-                console.log(json.data.id)
-                    tr.push('<tr>');
-                    tr.push('<td>' + json.data.id + '</td>');
-                    tr.push('<td>' + json.data.name + '</td>');
-                    tr.push('<td>' + json.data.userId + '</td>');
-                    tr.push('<td>' + json.data.password + '</td>');
-                    tr.push('<td>' + json.data.phoneNum + '</td>');
-                    tr.push('<td><a class=\'btn\' href=\"#add\" rel=\"modal:open\" id=' + json.data.id + '>Edit</a>&nbsp;&nbsp');
-                    tr.push('</tr>');
 
-                $('table').append($(json.data.join('')));
+                var tr = [];
+                objectData = json.data
+                tr.push('<tr>');
+                tr.push('<td>' + objectData.id + '</td>');
+                tr.push('<td>' + objectData.name + '</td>');
+                tr.push('<td>' + objectData.userId + '</td>');
+                tr.push('<td>' + objectData.password + '</td>');
+                tr.push('<td>' + objectData.phoneNum + '</td>');
+                tr.push('<td><a class=\'btn\' href=\"#add\" rel=\"modal:open\" id=' + objectData.id + '>Edit</a>&nbsp;&nbsp');
+                tr.push('</tr>');
+
+                $('table').append($(tr.join('')));
             });
 
             $(document).delegate('.btn', 'click', function () {
@@ -106,7 +115,7 @@
             });
 
         });
-        
+
         $(document).delegate('#update', 'click', function (event) {
             event.preventDefault();
             var id = $('#id1').val();
@@ -131,11 +140,12 @@
                 success: function (result) {
 
                     window.alert(result.message)
-                    window.reload(true);
+                    location.reload(true);
+                    window.location.href = "http://127.0.0.1:5500/useraccess.html";
                 },
                 error: function (err) {
                     window.alert(result.message)
-                    window.reload(true);
+                    location.reload(true);
                 }
             });
         });
@@ -145,11 +155,10 @@
 <body>
 
     <center>
-        <h2>USER MANAGEMENT APP</h2>
-    </center>
-
-    <center>
-        <p><a class='btn' href="#add" rel="modal:open"><b>ADD NEW USER</b></a></p>
+        <h2>USER MANAGEMENT APP </h2>
+        <p>
+            <button type="button"   onclick="logout()">LOGOUT</button>
+        </p>
     </center>
 
     <center>
@@ -182,9 +191,6 @@
         </p>
         <p>
             <input type="submit" id="addNew" value="ADD NEW">
-        </p>
-        <p>
-            <input type="submit" id="update" value="UPDATE">
         </p>
     </form>
 

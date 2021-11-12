@@ -10,7 +10,7 @@ This project aims to manage the users that you can login as an Admin and create 
 -Java_8V - Backend Programing Language
 -IDE(IntelliJIDEA)-Backend
 -Visual Studio Code and Node (Frontend)
--Mysql Databse(Workbench)-DATABSE
+-Mysql Database(Workbench)-DATABASE
 ```
 
 

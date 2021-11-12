@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Spring Boot AJAX jQuery CRUD</title>
+    <title>User Management App</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <!-- jQuery Modal -->
@@ -64,7 +64,7 @@
 
 
         function logout() {
-            location.href="http://127.0.0.1:5500/login.html";
+            location.href = "http://127.0.0.1:5500/login.html";
         }
 
         let objectData;
@@ -155,9 +155,10 @@
 <body>
 
     <center>
-        <h2>USER MANAGEMENT APP </h2>
+        <br>
+        <h2><b>USER MANAGEMENT APPLICATION</b></h2>
         <p>
-            <button type="button"   onclick="logout()">LOGOUT</button>
+            <button type="button" onclick="logout()">LOGOUT</button>
         </p>
     </center>
 
@@ -189,9 +190,11 @@
             <label>PhoneNum</label>
             <input type="text" id="phoneNum" name="phoneNum">
         </p>
-        <p>
-            <input type="submit" id="addNew" value="ADD NEW">
-        </p>
+        <center>
+            <p>
+                <input type="submit" id="addNew" value="ADD NEW">
+            </p>
+        </center>
     </form>
 
 </body>

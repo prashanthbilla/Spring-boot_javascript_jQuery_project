@@ -1,5 +1,5 @@
 # Spring-boot_javascript_jQuery_project
-## User Registration Application: 
+## User Management Application: 
 This project aims to manage the users that you can login as an Admin and create new user roles such as user creation and update as well as, If we are new users to the app then we will creating new user details with the help of SignUp. After user creation you can login in to the app with login username and password that you are provided by the time of creation and update the user details if you want.
 
 #### This Application is developed by the SpringBoot(Backend) and Javascript with jQuery(Frontend).
@@ -77,7 +77,7 @@ Getting user details:
 ## All the Logout buttons are Redirecting to Home Login Page:
 ![AdminSuccess](https://user-images.githubusercontent.com/85600714/141421853-41c9b65d-9ae5-4cd4-8041-a662bce0ffc7.png)
 
-# Home Login Page
+## Home Login Page
 ![LoginHome](https://user-images.githubusercontent.com/85600714/141421915-ccea2888-8042-4ef6-b423-54f4a3ae3940.png)
 
 ## New User Click the SignUp Botton to Register(User Details):

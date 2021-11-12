@@ -42,3 +42,6 @@ ___________________________________________________________________
       -phoneNum:(Mandatory)
       
       _________________________________________
+      
+## Home Page (Login page):
+![LoginHome](https://user-images.githubusercontent.com/85600714/141420220-274ea460-1124-4cdc-b622-7f76fb3f0d96.png)
